@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import IEmployees from "../../models/Employees";
-import AvatarPage from "../Pages/AvatarPage";
-import EmailPage from "../Pages/NamePage";
-import NamePage from "../Pages/NamePage";
+import AvatarPage from "./AvatarPage";
+import EmailPage from "./NamePage";
+import NamePage from "./NamePage";
 
 
 const EmployeesPage: FC<IEmployees> = (props: IEmployees) => {

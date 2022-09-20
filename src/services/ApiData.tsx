@@ -20,5 +20,4 @@ class ApiData {
     return response;
   }
 }
-
 export default new ApiData();
