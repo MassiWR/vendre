@@ -5,18 +5,18 @@ import EmployeesPage from "../Pages/EmployeesPage";
 
 const UserData: FC = () => {
 
-    const [users, setUser] = useState<any[]>([])
-    const [pageCount, setPageCount] = useState<number>(1);
+  const [users, setUser] = useState<any[]>([])
+  const [pageCount, setPageCount] = useState<number>(1);
     
-    const getUsers = (): void => {
-        const data = ApiData.loadApiData();
+  const getUsers = (): void => {
+      const data = ApiData.loadApiData();
         data.then((res: any) => {
             setUser(res.data.data);
             setPageCount(res.data.total_pages);
         });
     }
 
-    const getNextPageData = (page: number):void => {
+  const getNextPageData = (page: number):void => {
     const data = ApiData.getNextPageData(page);
     data.then((res:any) => {
       setUser(res.data.data);
@@ -27,18 +27,18 @@ const UserData: FC = () => {
     getNextPageData(page.selected + 1);
   };
 
-    useEffect(() => {
-        getUsers();        
-    }, [])
+  useEffect(() => {
+      getUsers();        
+  }, [])
 
-    return(
-        <div>
+  return(
+    <div>
       <div className="container">
         <div className="row">
-          {users?.map((user) => {
+          {users?.map((user, i) => {
             return (
               <EmployeesPage
-                key={user.id}
+                key={i}
                 id={user.id}
                 email={user.email}
                 first_name={user.first_name}
@@ -60,8 +60,8 @@ const UserData: FC = () => {
         activeClassName={"active"}
       ></ReactPaginate>
       </div>
-      </div>
-    )
+    </div>
+  )
 }
 
 export default UserData;

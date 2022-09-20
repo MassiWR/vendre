@@ -12,9 +12,9 @@ const EmployeesPage: FC<IEmployees> = (props: IEmployees) => {
         className="rounded mt-2 p-2 w-auto"
         style={{ backgroundColor: "#eee" }}
       >
-        <AvatarPage avatar={props.avatar} id={props.id} />
+        <AvatarPage avatar={props.avatar} id={props.id}  />
         <NamePage first_name={props.first_name} last_name={props.last_name} id={props.id}/>
-        <EmailPage email={props.email} id={props.id}/> 
+        <EmailPage email={props.email} id={props.id} /> 
       </div>
     </div>
   );

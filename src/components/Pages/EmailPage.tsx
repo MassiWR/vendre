@@ -3,8 +3,14 @@ import IEmployees from "../../models/Employees";
 
 const EmailPage: FC<IEmployees> = (props: IEmployees) => {
     return (
-        <>
-        </>
+    <>
+        <a
+        href={"mailto:" + props.email}
+        style={{ textDecoration: "underline" }}
+        className="text-dark">
+        Contact
+        </a>
+    </>
     )
 }
 
