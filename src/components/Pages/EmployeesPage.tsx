@@ -7,9 +7,9 @@ import NamePage from "./NamePage";
 
 const EmployeesPage: FC<IEmployees> = (props: IEmployees) => {
   return (
-    <div className="flex-col w-auto justify-content-center mb-4">
+    <div className="flex-col w-auto mb-4">
       <div
-        className="text-center rounded mt-2 p-2 w-auto"
+        className="text-center rounded mt-2 p-4 w-auto"
         style={{ backgroundColor: "#ddd"}}
       >
         <AvatarPage avatar={props.avatar} id={props.id}  />

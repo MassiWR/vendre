@@ -1,6 +1,13 @@
 .App {
   margin-top: 2rem;
-  
+
 }
 
 
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+}

@@ -6,7 +6,7 @@ const AvatarPage: FC<IEmployees> = (props: IEmployees) => {
     <>
       <img
         src={props.avatar}
-        className="rounded-circle p-2"
+        className="rounded-circle p-2 max-width"
         alt=".jpg"
       ></img>
     </>
