@@ -6,10 +6,11 @@ const EmailPage: FC<IEmployees> = (props: IEmployees) => {
     <>
         <a
         href={"mailto:" + props.email}
-        style={{ textDecoration: "underline" }}
+        style={{ textDecoration: "none" }}
         className="text-dark">
         Contact
         </a>
+
     </>
     )
 }
