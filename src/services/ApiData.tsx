@@ -1,7 +1,7 @@
 import axios from "axios";
 
-class UsersService {
-  async loadUserData() {
+class ApiData {
+  async loadApiData() {
     const response = await axios
       .get("https://reqres.in/api/users")
       .catch((err) => {
@@ -21,4 +21,4 @@ class UsersService {
   }
 }
 
-export default new UsersService();
+export default new ApiData();
