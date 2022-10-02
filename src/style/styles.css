@@ -2,13 +2,17 @@ body {
     background-color: #FAACA8;
     background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
     height: 100vh;
-}
+}   
 
 .userContainer {
     display: flex;
     flex-direction: row;
-
-}   
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    padding-top: 100px;
+   
+}
 
 .cards {
     display: flex;
@@ -23,14 +27,6 @@ body {
     border-radius: 0.5rem;
 }
 
-.userContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    padding-top: 50px;
-    width: 100vw;
-}
 
 .avatar {
     width: 100px;
