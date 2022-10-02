@@ -7,7 +7,7 @@ const EmailPage: FC<IEmployees> = (props: IEmployees) => {
         <a
         href={"mailto:" + props.email}
         style={{ textDecoration: "none" }}
-        className="text-dark">
+        className="text-dark mt-4">
         Contact
         </a>
 

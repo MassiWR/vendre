@@ -2,10 +2,12 @@ import React, { useEffect, useState, FC } from "react";
 import ReactPaginate from "react-paginate";
 import ApiData from "../../services/ApiData";
 import EmployeesPage from "../Pages/EmployeesPage";
+import "../../style/styles.css";
+
 
 const UserData: FC = () => {
 
-  const [users, setUser] = useState<any[]>([])
+  const [users, setUser] = useState<any[]>([]);
   const [pageCount, setPageCount] = useState<number>(1);
     
   const getUsers = (): void => {
@@ -29,13 +31,12 @@ const UserData: FC = () => {
 
   useEffect(() => {
       getUsers();        
-  }, [])
+  }, [pageCount]);
 
   return(
     <div>
-      <div className="container">
-        <div className="row">
-          {users?.map((user, i) => {
+      <div className="userContainer mb-4">
+         {users?.map((user, i) => {
             return (
               <EmployeesPage
                 key={i}
@@ -52,15 +53,16 @@ const UserData: FC = () => {
         pageCount={pageCount}
         onPageChange={handlePageChange}
         containerClassName={"pagination justify-content-center"}
-        pageClassName={"page-item"}
+        pageClassName={"page-item"} 
         pageLinkClassName={"page-link"}
-        previousClassName={"page-item"}
+        previousLabel={"<"}
+        nextLabel={">"}
         previousLinkClassName={"page-link"}
         nextClassName={"page-link"}
         activeClassName={"active"}
+        
       ></ReactPaginate>
       </div>
-    </div>
   )
 }
 
